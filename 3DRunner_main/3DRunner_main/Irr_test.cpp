@@ -14,8 +14,8 @@ using namespace irrklang;
 int main()
 {
 	Root Runner3D;
-	Runner3D.playMedia();
-	Runner3D.runGameLoop();
+	Runner3D.init();
+	Runner3D.update();
 
 //	SIrrlichtCreationParameters inputs;
 //	inputs.AntiAlias = 1;

@@ -1,6 +1,7 @@
 #pragma once
 #include <irrlicht.h>
 #include <irrKlang.h>
+#include "MastiffEventReceiver.cpp"
 #include <iostream> // Debug purposes
 
 using namespace irr;
@@ -15,9 +16,9 @@ public:
 	Root();
 
 	/*Plays demo media.*/
-	void Root::playMedia();
+	void Root::init();
 
-	void Root::runGameLoop();
+	void Root::update();
 
 	/* Destructor*/
 	~Root();
@@ -31,5 +32,9 @@ private:
 	video::IVideoDriver* driver;
 	scene::ISceneManager* smgr;
 	gui::IGUIEnvironment* guiEnv;
+
+	//MastEventReceiver eventReceiver;
+	MastEventReceiver* currentEventReceiver;
+	//IEventReceiver* currentEventReceiver;
 };
 
