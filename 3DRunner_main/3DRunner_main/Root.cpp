@@ -25,11 +25,13 @@ Root::Root()
 	driver = device->getVideoDriver();
 	smgr = device->getSceneManager();
 	guiEnv = device->getGUIEnvironment();
+
+	device->setEventReceiver(&eventReceiver);
 }
 
 void Root::init()
 {
-	currentEventReceiver->init();
+	//currentEventReceiver->init();
 
 	device->setWindowCaption(L"First proggy");
 
